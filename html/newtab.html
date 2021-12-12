@@ -3,31 +3,23 @@
 
     <head>
         <meta charset="utf-8">
+        <title>Neuer Tab</title>
         <link rel="stylesheet" href="../css/newtab.css">
-        <title>New Tab</title>
+        <script src="../scripts/clock.js"></script>
     </head>
-    <body onload="startTime()">
-        <h1>Hallo, Robin!</h1>
-
-        <div id="clock"></div>
-
-        <script>
-            function startTime() {
-                const today = new Date();
-                let h = today.getHours();
-                let m = today.getMinutes();
-                let s = today.getSeconds();
-                m = checkTime(m);
-                s = checkTime(s);
-                document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
-                setTimeout(startTime, 1000);
-            }
-
-            function checkTime(i) {
-                if (i < 10) { i = "0" + i };
-                return i;
-            }
-        </script>
-
+    <body>
+        <div class="container">
+            <div class="clock-container">
+                <div class="clock"></div>
+            </div>
+            <p id="greeting">Guten <span id="timeframe"></span>, Robin</p>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="https://www.youtube.com"><img src="../pictures/YouTube.png" id="icon"></a></li>
+                <li><a href="https://www.netflix.com"><img src="../pictures/Netflix.png" id="icon"></a></li>
+                <li><a href="https://www.amazon.de"><img src="../pictures/Amazon.png" id="icon"></a></li>
+            </ul>
+        </div>
     </body>
 </html>
