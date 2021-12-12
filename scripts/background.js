@@ -1,3 +1,3 @@
-chrome.tabs.onCreated.addListener(tab => {
+chrome.tabs.onActivated.addListener(tab => {
     
 });
